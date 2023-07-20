@@ -1,0 +1,352 @@
+:root{
+    --VeryDarkBlue: hsl(243, 87%, 12%);
+    --DesaturatedBlue: hsl(238, 22%, 44%);
+    --BrightBlue: hsl(224, 93%, 58%);
+    --ModerateCyan: hsl(170, 45%, 43%);
+    --LightGrayishBlue: hsl(240, 75%, 98.5%);
+    --LightGray: hsl(0, 0%, 75%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+img,
+button{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.displayNone{
+    display: none;
+}
+.first-error,
+.second-error{
+    color: #e93f3c;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--VeryDarkBlue);
+}
+nav{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+h3{
+    font-family: 'Raleway', sans-serif;
+    
+    font-weight: 700;
+    font-size: 40px;
+}
+nav{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 5vh;
+}
+nav > div > img{
+    content: url("./images/logo.svg");
+}
+ul li{
+    display: inline;
+    list-style-type: none;
+}
+ul li:nth-child(1),
+ul li:nth-child(2){
+    margin-right: 2vw;
+}
+nav,
+header,
+.content{
+    padding: 5vh 6vh 12.5vh 6vh;
+}
+.call-to-action,
+footer{
+    padding: 7vh 6vh 7vh 6vh;
+}
+header,
+.content,
+.call-to-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+header > div,
+.content > div,
+.call-to-action > div{
+    width: 50%;
+    height: auto;
+}
+header > div > *,
+.content > div > *,
+.call-to-action > div > *,
+footer > div > div > *,
+footer > div > img {
+    margin: 2vh;
+}
+header > div > img,
+.content > div > img{
+    width: 100% !important;
+    max-width: 600px;
+} 
+header > div > img{
+    content: url("./images/illustration-1.svg");
+    object-fit: cover;
+}
+header > div > form,
+.call-to-action > div > form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-a{
+    border-bottom: 1px solid var(--ModerateCyan);
+    width: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: var(--ModerateCyan);
+    padding-bottom: 5px;
+    align-items: end;
+}
+.content > div > div > a{
+    text-decoration: none;
+}
+.content > div > .container-a:hover{
+    cursor: pointer;
+    color: #7edece !important;
+    border-color: #7edece !important;
+}
+.content > div > .review{
+    margin-top: 4vh;
+    padding: 2vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 31px 16px rgba(191,191,191,0.4);
+    -webkit-box-shadow: 0px 0px 31px 16px rgba(191,191,191,0.4);
+    -moz-box-shadow: 0px 0px 31px 16px rgba(191,191,191,0.4);
+}
+@media (min-width: 1001px){
+    .review{
+        max-width: 400px;
+    }
+}
+.content > div > .review > .virgolette{
+    content: url("./images/icon-quotes.svg");
+}
+.flex-testimonial{
+    margin-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:end;
+    align-items: center;
+}
+.container-img{
+    flex: 50%;
+    max-width: 6vh;
+}
+.container-description{
+    flex: 50%;
+}
+.content > div > .review > div > div > .foto-profilo{
+    content: url("./images/avatar-testimonial.jpg");
+    border-radius: 100px;
+    max-width: 5vh;
+}
+form{
+    margin: 2vh 2vh 2vh 2vh !important;
+}
+footer{
+    background-color: var(--VeryDarkBlue);
+}
+footer > div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+footer > div > div{
+    flex: 25%;
+}
+@media (min-width: 1250px){
+    .email{
+        margin-right: 20px;
+    }
+    .email{
+        min-width: 300px;
+        max-width: 400px;
+    }
+    .submit{
+        max-width: 200px;
+    }
+}
+.email,
+.submit{
+    height: 40px;
+    flex: 50%;
+}
+.email{
+    padding-left: 10px;
+    border: 1px solid var(--VeryDarkBlue);
+}
+.email2{
+    border: 1px solid var(--DesaturatedBlue);
+}
+.submit{
+    height: 42px;
+    background-color: var(--BrightBlue);
+    border: none;
+    color: var(--LightGrayishBlue);
+    font-weight: 700;
+}
+.submit:hover{
+    cursor: pointer;
+}
+input{
+    border-radius: 3px;
+}
+.email::placeholder{
+    color: var(--LightGray);
+}
+.submit:active{
+    background-color: #6b9bff;
+}
+.email2,
+.second-error{
+    margin-bottom: 2vh;
+    width: 100% !important;
+}
+@media (min-width: 1001px){
+    form:last-child{
+        padding-left: 14vw;
+        margin-top: 6vh;
+    }
+}
+.submit2{
+    width: 100% !important;
+}
+@media (max-width: 1268px){
+    .email{
+        margin-bottom: 2vh;
+    }
+}
+@media (max-width: 1250px){
+    .email2{
+        min-width: none !important;
+    }
+}
+.content > div > img{
+    content: url("./images/illustration-2.svg");
+}
+header > div:last-child,
+.content > div:last-child{
+    text-align: center;
+}
+.curve{
+    content: url("./images/bg-curve-desktop.svg");
+}
+.content{
+    background-color: var(--LightGrayishBlue);
+}
+.call-to-action{
+    color: var(--LightGrayishBlue);
+    background-color: var(--DesaturatedBlue);
+}
+footer > div:first{
+    margin-bottom: 0px;
+}
+.li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.li > *:first-child{
+    margin-right: 10px;
+}
+.social{
+    border: 1px solid white;
+    padding: 4px;
+    margin-left: 0px !important;
+    border-radius: 100px;
+}
+@media (max-width: 1000px){
+    nav > div > img{
+        max-width: 30vw;
+    }
+    h3{
+        font-size: 34px;
+    }
+    nav{
+        padding: 1vh;
+    }
+    header,
+    .content,
+    .call-to-action,
+    footer{
+        padding: 2vh;
+    }
+    header,
+    .content{
+        flex-direction: column-reverse;
+    }
+    .call-to-action,
+    footer{
+        flex-direction: column;
+    }
+    header > div,
+    .content > div,
+    .call-to-action > div,
+    footer > div > div{
+        flex: 100%;
+        width: 100%;
+    }
+    form{
+        margin: auto !important;
+    }
+    .content > div > .review{
+        margin: 4vh auto 2vh auto !important;
+    }
+    header > div > *,
+    .call-to-action > div > *,
+    footer > div > div:last-child{
+        text-align: center;
+    }
+    .content > div > h3,
+    .content > div > a{
+        text-align: center;
+    }
+    .container-a{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    header > div > form,
+    .review,
+    .call-to-action > div > form{
+        margin: auto;
+        max-width: 400px;
+    }
+    .review,
+    .call-to-action > div > form{
+        margin: 0.5vh auto 2vh auto !important;
+    }
+    header > div > img,
+    .content > div > img{
+        width: 100%;
+        margin: 0;
+        max-width: 550px;
+    }
+    .curve{
+        content: url("./images/bg-curve-mobile.svg");
+    }
+    .call-to-action > div > form{
+        max-width: 300px !important;
+    }
+    footer > div > div{
+        margin: 1vh auto 1vh auto;
+    }
+}
